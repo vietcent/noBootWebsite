@@ -1,14 +1,79 @@
 // Vincent Nguyen
 // SASS
 
-$mainColor: maroon;
+$mainColor: royalblue;
+$careArrow: url('../images/listArrow.png');
+
+body{
+	background-color: whitesmoke;
+}
+
+.container{
+	margin-left: 200px;
+	margin-right: 200px;
+	background-color: white;
+}
 
 div{
 	border: 1px solid black;
 	
 }
 
-.sideBarRight{
+header{
+	background-color: white;
+	.nav{
+		
+	}
+	img{
+		
+	}
+	ul{
+		
+	}
+	li{
+		display: inline;
+	}
+	a{
+		
+	}
+}
+
+.mainContent{
+	width: 50%;
+	float: left;
+}
+
+.sideBarContainer{
+	display: inline-block;
+	vertical-align: top;
 	float: right;
-	
+	p{
+		text-align: left;
+	}
+	li{
+		margin-top: 10px;
+		border-top: solid thin black;
+		list-style-image: $careArrow;
+	}
+	a{
+		text-decoration: none;
+		font-size: 10pt;
+		color: black;
+	}
+}
+
+.promotionSidebar{
+	background-color: $mainColor;
+	p{
+		text-align: left;
+		color: white;
+		padding-left: 20px;
+	}
+}
+
+footer{
+	background-color: grey;
+	bottom: 0;
+	width: 100%;
+	clear: both;
 }

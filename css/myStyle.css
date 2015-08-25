@@ -1,4 +1,49 @@
 body {
-  border: solid black; }
+  background-color: whitesmoke; }
+
+.container {
+  margin-left: 200px;
+  margin-right: 200px;
+  background-color: white; }
+
+div {
+  border: 1px solid black; }
+
+header {
+  background-color: white; }
+  header li {
+    display: inline; }
+
+.mainContent {
+  width: 50%;
+  float: left; }
+
+.sideBarContainer {
+  display: inline-block;
+  vertical-align: top;
+  float: right; }
+  .sideBarContainer p {
+    text-align: left; }
+  .sideBarContainer li {
+    margin-top: 10px;
+    border-top: solid thin black;
+    list-style-image: url("../images/listArrow.png"); }
+  .sideBarContainer a {
+    text-decoration: none;
+    font-size: 10pt;
+    color: black; }
+
+.promotionSidebar {
+  background-color: royalblue; }
+  .promotionSidebar p {
+    text-align: left;
+    color: white;
+    padding-left: 20px; }
+
+footer {
+  background-color: grey;
+  bottom: 0;
+  width: 100%;
+  clear: both; }
 
 /*# sourceMappingURL=myStyle.css.map */

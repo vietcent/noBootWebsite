@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 
-<html lang="en" ng-app="angularPractice">
+<html lang="en" ng-app>
 
 <head>
-	
-	<link href="css/myStyle.scss" rel="stylesheet">
-	<title>No Bootstrap but Responsive by Vincent Nguyen</title>
+	<meta content="viewport">
+	<link href="css/myStyle.css" rel="stylesheet">
+	<title>CareFirst Customer Summary</title>
+	<script src="js/angular.js"></script>
 </head>
 
 <body>
@@ -14,30 +15,118 @@
 			<nav class="nav">
 				<img src="" alt="BrandLogo">
 				<p>this is where the nav bar goes</p>
+				<ul>
+					<li>
+						<a href="#">My Coverage</a>
+					</li>
+					<li>
+						<a href="#">Claims</a>
+					</li>
+					<li>
+						<a href="#">Doctors</a>
+					</li>
+					<li>
+						<a href="#">Health & Wellness</a>
+					</li>
+					<li>
+						<a href="#">Plan Documents</a>
+					</li>
+					<li>
+						<a href="#">Estimate My Cost</a>
+					</li>
+					<li>
+						<a href="#">Help</a>
+					</li>
+				</ul>
 			</nav>
 		</header>
-		
-		<div class="welcomeUser">
-			<h1>Hello, Vincent</h1>
-		</div>
-		
-		<div class="mainContent">
-			<p>this is the main content</p>
-		</div>
-		
-		<div class="sideBarRight">
-			<p>this is the sidebar</p>
-		</div>
-		
-		<footer>
-			<p>this is the footer</p>
-			<div class="contactUs">
+		<!--end of header wrapper-->
+
+		<div class="content">
+			<div class="welcomeUser" ng-controller="AngularController">
+				<h1>{{author.name}}</h1>
+				<p>He is a {{author.title}} and he goes to {{author.company}}</p>
 			</div>
-		</footer>
+
+			<div class="mainContent">
+				<p>this is the main content</p>
+
+			</div>
+			<div class="sideBarContainer">
+				<div class="quickLinks">
+					<p>Quick Links</p>
+					<ul>
+						<li>
+							<a href="#">Pay My Bill Online</a>
+						</li>
+						<li>
+							<a href="#">Blue Fund Administration</a>
+						</li>
+						<li>
+							<a href="#">BlueRewards</a>
+						</li>
+						<li>
+							<a href="#">EOBs</a>
+						</li>
+						<li>
+							<a href="#">My Claims</a>
+						</li>
+						<li>
+							<a href="#">Select/Change PCP</a>
+						</li>
+						<li>
+							<a href="#">Drug Pricing Tool</a>
+						</li>
+						<li>
+							<a href="#">Treatment Cost Estimator</a>
+						</li>
+					</ul>
+				</div>
+				<div class="promotionSidebar">
+					<img src="images/promotionGirl.png" alt="Promotion Image">
+					<p>New CareFirst
+						<br> Responsive website launched
+					</p>
+					<p>
+						Now you can use
+						<br> Tablet & Mobile Devices to
+						<br> access My Account
+					</p>
+				</div>
+			</div>
+		</div>
+		<!--end of content wrapper-->
 	</div>
-	<!--end of container-->
+	<!--end of container wrapper-->
 
+	<footer>
+		<p>this is the footer</p>
+		<div class="firstRow">
+			<div class="links">
+			</div>
+			<div class="social">
+			</div>
+		</div>
+		<div class="termsConditions">
+			<p>
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+				text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+				It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+				It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+				with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			</p>
+		</div>
+	</footer>
+	<!--end of footer wrapper-->
 
+	<!--<script>
+		function AngularController($scope){
+		$scope.author = {
+			'name': 'Vincent Nguyen',
+			'title' : 'ho',
+			'company' : 'Arizona State University'
+		}};
+	</script>-->
 </body>
 
 </html>
