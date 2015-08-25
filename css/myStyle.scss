@@ -20,24 +20,30 @@ div{
 }
 
 header{
-	background-color: white;
 	.nav{
-		
 	}
 	img{
-		
+		float: left;
 	}
 	ul{
-		
+		background-color: $mainColor;
+		height: 40px;
+		clear: both;
 	}
 	li{
 		display: inline;
+		border-left: solid thin white;
 	}
 	a{
-		
+		color: white;
+		text-align: center;
 	}
 }
 
+
+.content{
+	background-color: white;
+}
 .mainContent{
 	width: 50%;
 	float: left;
@@ -72,8 +78,35 @@ header{
 }
 
 footer{
-	background-color: grey;
+	padding-left: 200px;
+	padding-right: 200px;
+	color: white;
+	background-color: dimgrey;
 	bottom: 0;
-	width: 100%;
 	clear: both;
+	.userLinks{
+		.links{
+			float: left;
+		}
+		li{
+		display: inline;
+			a{
+				color: white;
+				text-decoration: none;
+			}
+		}		
+		.social{
+			float: right;
+			li{
+				display: inline;
+				img{
+					height: 20px;
+				}
+			}
+		}
+	}
+	.termsConditions{
+		clear: both;
+	}
+		
 }

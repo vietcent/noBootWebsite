@@ -9,10 +9,21 @@ body {
 div {
   border: 1px solid black; }
 
-header {
+header img {
+  float: left; }
+header ul {
+  background-color: royalblue;
+  height: 40px;
+  clear: both; }
+header li {
+  display: inline;
+  border-left: solid thin white; }
+header a {
+  color: white;
+  text-align: center; }
+
+.content {
   background-color: white; }
-  header li {
-    display: inline; }
 
 .mainContent {
   width: 50%;
@@ -41,9 +52,26 @@ header {
     padding-left: 20px; }
 
 footer {
-  background-color: grey;
+  padding-left: 200px;
+  padding-right: 200px;
+  color: white;
+  background-color: dimgrey;
   bottom: 0;
-  width: 100%;
   clear: both; }
+  footer .userLinks .links {
+    float: left; }
+  footer .userLinks li {
+    display: inline; }
+    footer .userLinks li a {
+      color: white;
+      text-decoration: none; }
+  footer .userLinks .social {
+    float: right; }
+    footer .userLinks .social li {
+      display: inline; }
+      footer .userLinks .social li img {
+        height: 20px; }
+  footer .termsConditions {
+    clear: both; }
 
 /*# sourceMappingURL=myStyle.css.map */

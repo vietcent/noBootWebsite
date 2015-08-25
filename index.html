@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 
-<html lang="en" ng-app>
+<html lang="en" ng-app="website">
 
 <head>
+	<meta charset="utf-8">
 	<meta content="viewport">
 	<link href="css/myStyle.css" rel="stylesheet">
 	<title>CareFirst Customer Summary</title>
-	<script src="js/angular.js"></script>
 </head>
 
-<body>
+<body ng-controller="MainCtrl">
 	<div class="container">
 		<header>
 			<nav class="nav">
-				<img src="" alt="BrandLogo">
-				<p>this is where the nav bar goes</p>
+				<img src="images/careFirstBrand.png" alt="BrandLogo">
+				<div class="quickSettings">
+					<ul>
+						<li>
+							<a href="#">Contact Us</a>
+						</li>
+						<li>
+							<a href="#">Print</a>
+						</li>
+						<li>
+							<p>Text Size A A A</p>
+						</li>
+					</ul>
+				</div>
 				<ul>
 					<li>
 						<a href="#">My Coverage</a>
@@ -83,7 +95,8 @@
 					</ul>
 				</div>
 				<div class="promotionSidebar">
-					<img src="images/promotionGirl.png" alt="Promotion Image">
+					<img ng-repeat="slide in slides" class="slide" ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+					<!--<img src="images/promotionGirl.png" alt="Promotion Image">-->
 					<p>New CareFirst
 						<br> Responsive website launched
 					</p>
@@ -92,6 +105,18 @@
 						<br> Tablet & Mobile Devices to
 						<br> access My Account
 					</p>
+					<a class="arrowPrev" href="#" ng-click="nextSlide()"></a>
+					<a class="arrowNext" href="#" ng-click="prevSlide()"></a>
+					<nav class="imageNav">
+						<div class="wrapper">
+							<ul class="dots">
+								<li class="dot" ng-repeat="slide in slides">
+									<a href="#" ng-class="{'active':isCurrentSlideIndex($index)}" ng-click="setCurrentSlideIndex($index);">{{slide.description}}
+									</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
 				</div>
 			</div>
 		</div>
@@ -100,11 +125,28 @@
 	<!--end of container wrapper-->
 
 	<footer>
-		<p>this is the footer</p>
-		<div class="firstRow">
+		<div class="userLinks">
 			<div class="links">
+				<ul id="firstRow">
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#">Site Demo</a></li>
+					<li><a href="#">Terms and Agreements</a></li>
+				</ul>
+				<ul id="secondRow">
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">Site Map</a></li>
+					<li><a href="#">Privacy</a></li>
+				</ul>
+			</div>
+			<div id="currentTime">
 			</div>
 			<div class="social">
+				<ul>
+					<li>Connect with us</li>
+					<li><img src="images/facebook.png" alt="Facebook"></li>
+					<li><img src="images/twitter.png" alt="Twitter"></li>
+					<li><img src="images/youtube.png" alt="Youtube"></li>
+				</ul>
 			</div>
 		</div>
 		<div class="termsConditions">
@@ -117,16 +159,13 @@
 			</p>
 		</div>
 	</footer>
-	<!--end of footer wrapper-->
-
-	<!--<script>
-		function AngularController($scope){
-		$scope.author = {
-			'name': 'Vincent Nguyen',
-			'title' : 'ho',
-			'company' : 'Arizona State University'
-		}};
-	</script>-->
+	
+	<!--JS code goes here-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js">
+	</script>
+	<script src="js/angular.js"></script>
+	<script src="js/carousel.js"></script>
+	<script src="js/todaysDatejs"></script>
 </body>
 
 </html>
