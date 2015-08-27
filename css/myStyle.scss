@@ -2,7 +2,9 @@
 // SASS
 
 $mainColor: royalblue;
+$secondColor: white;
 $careArrow: url('../images/listArrow.png');
+$careArrow2: url('../images/listArrow.png');
 
 body{
 	background-color: whitesmoke;
@@ -19,9 +21,22 @@ div{
 	
 }
 
-header{
-	.nav{
+.brandHeader{
+	.brandLogo{
+		float: left;
 	}
+	
+	.quickSettings{
+		float: right;
+		width: 30%;
+		li{
+			display: inline;
+		}
+	}
+}
+
+.nav{
+	
 	img{
 		float: left;
 	}
@@ -40,19 +55,33 @@ header{
 	}
 }
 
+.title{
+	font-weight: bold;
+}
 
 .content{
-	background-color: white;
+	background-color: $secondColor;
 }
 .mainContent{
-	width: 50%;
+	width: 70%;
 	float: left;
+	.viewingSetting{
+		li{
+		display: inline;
+		text-decoration: none;
+		}
+	}
+	.planSummary{
+		
+	}
 }
+
 
 .sideBarContainer{
 	display: inline-block;
 	vertical-align: top;
 	float: right;
+	background-color: $secondColor;
 	p{
 		text-align: left;
 	}
@@ -87,6 +116,7 @@ footer{
 	.userLinks{
 		.links{
 			float: left;
+			width: 50%;
 		}
 		li{
 		display: inline;
@@ -96,6 +126,7 @@ footer{
 			}
 		}		
 		.social{
+			width: 30%;
 			float: right;
 			li{
 				display: inline;

@@ -9,30 +9,45 @@ body {
 div {
   border: 1px solid black; }
 
-header img {
+.brandHeader .brandLogo {
   float: left; }
-header ul {
+.brandHeader .quickSettings {
+  float: right;
+  width: 30%; }
+  .brandHeader .quickSettings li {
+    display: inline; }
+
+.nav img {
+  float: left; }
+.nav ul {
   background-color: royalblue;
   height: 40px;
   clear: both; }
-header li {
+.nav li {
   display: inline;
   border-left: solid thin white; }
-header a {
+.nav a {
   color: white;
   text-align: center; }
+
+.title {
+  font-weight: bold; }
 
 .content {
   background-color: white; }
 
 .mainContent {
-  width: 50%;
+  width: 70%;
   float: left; }
+  .mainContent .viewingSetting li {
+    display: inline;
+    text-decoration: none; }
 
 .sideBarContainer {
   display: inline-block;
   vertical-align: top;
-  float: right; }
+  float: right;
+  background-color: white; }
   .sideBarContainer p {
     text-align: left; }
   .sideBarContainer li {
@@ -59,13 +74,15 @@ footer {
   bottom: 0;
   clear: both; }
   footer .userLinks .links {
-    float: left; }
+    float: left;
+    width: 50%; }
   footer .userLinks li {
     display: inline; }
     footer .userLinks li a {
       color: white;
       text-decoration: none; }
   footer .userLinks .social {
+    width: 30%;
     float: right; }
     footer .userLinks .social li {
       display: inline; }

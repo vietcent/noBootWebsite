@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 
-<html lang="en" ng-app="website">
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">
 	<meta content="viewport">
 	<link href="css/myStyle.css" rel="stylesheet">
+	<link rel="icon" type="image/png" href="images/health_favicon.png">
 	<title>CareFirst Customer Summary</title>
 </head>
 
-<body ng-controller="MainCtrl">
+<body>
 	<div class="container">
 		<header>
-			<nav class="nav">
-				<img src="images/careFirstBrand.png" alt="BrandLogo">
+			<div class="userSettings">
+				<ul>
+					<li>John Smith</li>
+					<li></li>
+					<li>Community College of Baltimore County</li>
+					<li><a href="#">Switch Account</a></li>
+					<li><a href="#">Log Out</a></li>
+				</ul>
+			</div>
+			<div class="brandHeader">
+				<div class="brandLogo">
+					<img src="images/careFirstBrand.png" alt="BrandLogo">
+				</div>
 				<div class="quickSettings">
 					<ul>
 						<li>
@@ -27,6 +39,8 @@
 						</li>
 					</ul>
 				</div>
+			</div>
+			<nav class="nav">
 				<ul>
 					<li>
 						<a href="#">My Coverage</a>
@@ -55,14 +69,73 @@
 		<!--end of header wrapper-->
 
 		<div class="content">
-			<div class="welcomeUser" ng-controller="AngularController">
-				<h1>{{author.name}}</h1>
-				<p>He is a {{author.title}} and he goes to {{author.company}}</p>
+			<div class="welcomeUser">
+				<h1>Welcome, John Smith</h1>
 			</div>
 
 			<div class="mainContent">
-				<p>this is the main content</p>
-
+				<div class="viewingSetting">
+					<ul>
+						<li>
+							Viewing:
+						</li>
+						<li>
+							<select>
+								<option value="medicalPlan">
+									Medical Plan
+								</option>
+								<option value="InsuancePlan">
+									InsurancePlan
+								</option>
+							</select>
+						</li>
+					</ul>
+				</div>
+				<p>Medical Plan Summary</p>
+				<div class="planSummary">
+					<table>
+						<tr>
+						<th><span class="title">Plan Type:</span></th>
+						<th><span class="title">Group Number:</span></th>
+						<th><span class="title">Subscriber:</span></th>
+						</tr>
+						<tr>
+							<td>BluePreferred PPO</td>
+							<td>1Jhw</td>
+							<td>Amy Sherwh</td>
+						</tr>
+						<tr>
+							<th><span class="title">Start Date:</span></th>
+							<th><span class="title">Member ID:</span></th>
+							<th><span class="title">PCP:</span></th>
+						</tr>
+						<tr>
+							<td>December 1, 2013</td>
+							<td>1923853</td>
+							<td>Dr. John Mwehsysky
+								<br>
+								PCMH Provider
+							</td>
+						</tr>
+					</table>
+					<div class="planLinks">
+						<a href="#">Coverage Details</a>
+						<a href="#">My ID Cards</a>
+					</div>
+					<div class="insuranceSummary">
+						<table>
+							<tr>
+								<th><span class="title">PCP Copay:</span></th>
+								<th><span class="title">Specialist Copay:</span></th>
+							</tr>
+							<tr>
+								<td>$15</td>
+								<td>$35</td>
+							</tr>
+						</table>
+						<a href="#">My Benefits</a>
+					</div>
+				</div>
 			</div>
 			<div class="sideBarContainer">
 				<div class="quickLinks">
@@ -95,8 +168,8 @@
 					</ul>
 				</div>
 				<div class="promotionSidebar">
-					<img ng-repeat="slide in slides" class="slide" ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
-					<!--<img src="images/promotionGirl.png" alt="Promotion Image">-->
+					<!--<img ng-repeat="slide in slides" class="slide" ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">-->
+					<img src="images/promotionGirl.png" alt="Promotion Image">
 					<p>New CareFirst
 						<br> Responsive website launched
 					</p>
@@ -105,7 +178,7 @@
 						<br> Tablet & Mobile Devices to
 						<br> access My Account
 					</p>
-					<a class="arrowPrev" href="#" ng-click="nextSlide()"></a>
+					<!--<a class="arrowPrev" href="#" ng-click="nextSlide()"></a>
 					<a class="arrowNext" href="#" ng-click="prevSlide()"></a>
 					<nav class="imageNav">
 						<div class="wrapper">
@@ -116,7 +189,7 @@
 								</li>
 							</ul>
 						</div>
-					</nav>
+					</nav>-->
 				</div>
 			</div>
 		</div>
@@ -131,8 +204,7 @@
 					<li><a href="#">FAQ</a></li>
 					<li><a href="#">Site Demo</a></li>
 					<li><a href="#">Terms and Agreements</a></li>
-				</ul>
-				<ul id="secondRow">
+					<br>
 					<li><a href="#">Contact Us</a></li>
 					<li><a href="#">Site Map</a></li>
 					<li><a href="#">Privacy</a></li>
@@ -143,9 +215,26 @@
 			<div class="social">
 				<ul>
 					<li>Connect with us</li>
-					<li><img src="images/facebook.png" alt="Facebook"></li>
-					<li><img src="images/twitter.png" alt="Twitter"></li>
-					<li><img src="images/youtube.png" alt="Youtube"></li>
+					<li>
+						<a href="www.facebook.com">
+							<img src="images/facebook.png" alt="Facebook">
+						</a>
+					</li>
+					<li>
+						<a href="www.twitter.com">
+							<img src="images/twitter.png" alt="Twitter">
+						</a>
+					</li>
+					<li>
+						<a href="www.youtube.com">
+							<img src="images/youtube.png" alt="Youtube">
+						</a>
+					</li>
+					<li>
+						<a href="www.linkedin.com">
+							<img src="images/linkedin.png" alt="LinkedIn">
+						</a>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -159,7 +248,7 @@
 			</p>
 		</div>
 	</footer>
-	
+
 	<!--JS code goes here-->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js">
 	</script>
@@ -167,5 +256,4 @@
 	<script src="js/carousel.js"></script>
 	<script src="js/todaysDatejs"></script>
 </body>
-
 </html>
